@@ -1,6 +1,4 @@
-import React from "react";
-import "../CV/CV"
-import "../components/Hero.css";
+
 
 const Hero = ({ hero }) => {
   return (

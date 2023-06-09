@@ -1,22 +1,22 @@
-import React from "react";
-import "./Education.css";
 
-const Education = ({ education }) => {
+const Education = (education) => {
+  console.log(education);
   return (
     <div>
-      <div className="education card">
-        {education.map((item) => {
+      <ul>
+        {education.map((element, i) =>{
           return (
-            <div key={JSON.stringify(item)}>
-              <p className="name"> {item.name}</p>
-              <p>{item.where}</p>
-              <p>{item.date}</p>
-            </div>
-          );
-        })}
-      </div>
+            <li key={i}>
+             <p>{element.date}</p> 
+             <p>{element.name}</p> 
+             <p>{element.where}</p>
+            </li>
+          )
+        }
+        )}
+      </ul>
     </div>
-  );
-};
+  )
+}
 
-export default Education;
+export default Education

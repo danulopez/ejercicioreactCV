@@ -1,22 +1,19 @@
-import React from 'react';
-import "./About.css"
+import PropTypes from 'prop-types';
 
 const About = ({ about }) => {
-  return (
-    
-      {about.map((element, i) => {
-        console.log(element)
-        return (
-          <div key={i}>
-            <p>{element.info}</p>
-           
+return (
+<>
+<ul>
+{about.map((element, i) => {
+return <li key={i}>{element.info}</li>;
+})}
+</ul>
+</>
+);
+};
 
-          </div>
-        );
-      })}
-  );
+About.propTypes = {
+about: PropTypes.array.isRequired,
+};
 
-  };
-
-export default About
-
+export default About;
